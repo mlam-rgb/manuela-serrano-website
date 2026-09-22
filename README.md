@@ -31,7 +31,6 @@ manuela-serrano-website/
 - Languages — English, Spanish, Portuguese
 - Downloadable 2026 résumé
 - Professional email contact
-- Cachapas side business — traditional Venezuelan corn pancakes
 
 The public website intentionally does **not** display the phone number from the résumé. If Manuela wants it public, it can be added to the contact section in `index.html`.
 
