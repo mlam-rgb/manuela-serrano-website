@@ -891,3 +891,335 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== 2026 résumé additions ===== */
+.hero-location {
+  color: var(--muted);
+  text-align: right;
+}
+
+.hero-subcopy {
+  max-width: 650px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.experience-date {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.46);
+  font-size: 11px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.impact {
+  padding-top: clamp(78px, 10vw, 150px);
+  padding-bottom: clamp(78px, 10vw, 150px);
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 34px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.impact-card {
+  min-height: 330px;
+  padding: 32px clamp(22px, 2.7vw, 38px) 30px 0;
+  border-right: 1px solid var(--line);
+}
+
+.impact-card + .impact-card {
+  padding-left: clamp(22px, 2.7vw, 38px);
+}
+
+.impact-card:last-child {
+  border-right: 0;
+}
+
+.impact-card strong {
+  display: block;
+  min-height: 112px;
+  color: var(--red);
+  font-size: clamp(40px, 4.3vw, 68px);
+  line-height: 0.92;
+  letter-spacing: -0.055em;
+  font-weight: 600;
+}
+
+.impact-card span {
+  display: block;
+  margin-top: 38px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.impact-card p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.projects-heading {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: clamp(36px, 8vw, 120px);
+  align-items: end;
+  margin-top: clamp(80px, 11vw, 160px);
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--line);
+}
+
+.projects-heading h3 {
+  max-width: 850px;
+  margin: 0;
+  font-size: clamp(36px, 5vw, 70px);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+  font-weight: 600;
+}
+
+.projects-grid-four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: 0;
+  border-top: 0;
+}
+
+.projects-grid-four .project-card {
+  min-height: 360px;
+}
+
+.projects-grid-four .project-card h3 {
+  margin-top: 82px;
+}
+
+.credentials-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1.1fr 0.8fr;
+  gap: 0;
+  margin-top: 42px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.credential-block {
+  min-height: 180px;
+  padding: 28px clamp(22px, 3vw, 42px) 28px 0;
+  border-right: 1px solid var(--line);
+}
+
+.credential-block + .credential-block {
+  padding-left: clamp(22px, 3vw, 42px);
+}
+
+.credential-block:last-child {
+  border-right: 0;
+}
+
+.credential-block strong {
+  display: block;
+  margin-top: 42px;
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.credential-block p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.credential-resume {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.credential-resume a {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 42px;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 8px;
+}
+
+.contact-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 12px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.resume-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.36);
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+.resume-button:hover {
+  background: var(--white);
+  color: var(--ink);
+  border-color: var(--white);
+}
+
+@media (max-width: 1100px) {
+  .impact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .impact-card:nth-child(2) {
+    border-right: 0;
+  }
+
+  .impact-card:nth-child(-n+2) {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .impact-card:nth-child(3) {
+    padding-left: 0;
+  }
+
+  .projects-grid-four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .projects-grid-four .project-card,
+  .projects-grid-four .project-card + .project-card {
+    min-height: 300px;
+    padding: 28px clamp(24px, 3vw, 42px) 28px 0;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .projects-grid-four .project-card:nth-child(even) {
+    padding-left: clamp(24px, 3vw, 42px);
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  .projects-grid-four .project-card:nth-child(n+3) {
+    border-bottom: 0;
+  }
+
+  .credentials-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .credential-block:nth-child(2) {
+    border-right: 0;
+  }
+
+  .credential-resume {
+    grid-column: 1 / -1;
+    min-height: 130px;
+    padding-left: 0 !important;
+    border-top: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-location {
+    display: none;
+  }
+
+  .hero-subcopy {
+    font-size: 16px;
+  }
+
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-card,
+  .impact-card + .impact-card,
+  .impact-card:nth-child(3) {
+    min-height: 0;
+    padding: 28px 0 30px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .impact-card:last-child {
+    border-bottom: 0;
+  }
+
+  .impact-card strong {
+    min-height: 0;
+  }
+
+  .impact-card span {
+    margin-top: 34px;
+  }
+
+  .projects-heading {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .projects-grid-four {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid-four .project-card,
+  .projects-grid-four .project-card + .project-card,
+  .projects-grid-four .project-card:nth-child(even) {
+    min-height: 0;
+    padding: 28px 0 30px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .projects-grid-four .project-card:last-child {
+    border-bottom: 0;
+  }
+
+  .projects-grid-four .project-card h3 {
+    margin-top: 50px;
+  }
+
+  .credentials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .credential-block,
+  .credential-block + .credential-block,
+  .credential-resume {
+    grid-column: auto;
+    min-height: 0;
+    padding: 28px 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .credential-block:last-child {
+    border-bottom: 0;
+  }
+
+  .credential-block strong,
+  .credential-resume a {
+    margin-top: 28px;
+  }
+
+  .contact-link {
+    font-size: clamp(20px, 6vw, 30px);
+  }
+}
