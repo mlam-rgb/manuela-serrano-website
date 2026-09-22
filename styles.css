@@ -204,12 +204,27 @@ a {
 }
 
 .hero h1 {
-  margin: 22px 0 36px;
-  max-width: 1300px;
-  font-size: clamp(68px, 12vw, 180px);
-  line-height: 0.78;
-  letter-spacing: -0.075em;
+  margin: 24px 0 34px;
+  max-width: none;
+}
+
+/* Editorial name lockup: one confident line on larger screens,
+   an intentional two-line composition on mobile. */
+.hero-name {
+  display: flex;
+  align-items: baseline;
+  gap: 0.18em;
+  width: 100%;
+  white-space: nowrap;
+  font-size: clamp(56px, 7.6vw, 118px);
+  line-height: 0.9;
+  letter-spacing: -0.062em;
   font-weight: 600;
+}
+
+.hero-name-primary,
+.hero-name-secondary {
+  display: inline-block;
 }
 
 .hero-grid {
@@ -844,9 +859,25 @@ a {
   }
 
   .hero h1 {
-    font-size: clamp(62px, 20vw, 118px);
-    line-height: 0.82;
-    margin-bottom: 26px;
+    margin-top: 20px;
+    margin-bottom: 28px;
+  }
+
+  .hero-name {
+    display: block;
+    white-space: normal;
+    font-size: clamp(54px, 15.8vw, 86px);
+    line-height: 0.86;
+    letter-spacing: -0.058em;
+  }
+
+  .hero-name-primary,
+  .hero-name-secondary {
+    display: block;
+  }
+
+  .hero-name-secondary {
+    margin-top: -0.035em;
   }
 
   .hero-grid {
