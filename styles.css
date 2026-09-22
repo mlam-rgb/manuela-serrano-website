@@ -524,6 +524,35 @@ a {
   font-weight: 600;
 }
 
+.manifesto-spanish {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.24fr) minmax(0, 1fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: start;
+  margin-top: clamp(54px, 7vw, 96px);
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.38);
+}
+
+.manifesto-spanish span {
+  padding-top: 8px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.manifesto-spanish p {
+  max-width: 850px;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(30px, 4vw, 58px);
+  font-style: italic;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
@@ -881,6 +910,16 @@ a {
 
   .approach-step h3 {
     margin-top: 54px;
+  }
+
+  .manifesto-spanish {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 48px;
+  }
+
+  .manifesto-spanish span {
+    padding-top: 0;
   }
 
   .education-strip {
