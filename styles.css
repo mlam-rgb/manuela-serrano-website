@@ -1037,6 +1037,18 @@ a {
   margin-top: 82px;
 }
 
+.projects-grid-five {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.projects-grid-five .project-card {
+  min-height: 360px;
+}
+
+.projects-grid-five .project-card h3 {
+  margin-top: 82px;
+}
+
 .credentials-grid {
   display: grid;
   grid-template-columns: 1.1fr 1.1fr 0.8fr;
@@ -1140,6 +1152,10 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .projects-grid-five {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .projects-grid-four .project-card,
   .projects-grid-four .project-card + .project-card {
     min-height: 300px;
@@ -1156,6 +1172,24 @@ a {
 
   .projects-grid-four .project-card:nth-child(n+3) {
     border-bottom: 0;
+  }
+
+  .projects-grid-five .project-card,
+  .projects-grid-five .project-card + .project-card {
+    min-height: 300px;
+    padding: 28px clamp(24px, 3vw, 42px) 28px 0;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .projects-grid-five .project-card:nth-child(even) {
+    padding-left: clamp(24px, 3vw, 42px);
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  .projects-grid-five .project-card:last-child {
+    border-right: 0;
   }
 
   .credentials-grid {
@@ -1217,6 +1251,10 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .projects-grid-five {
+    grid-template-columns: 1fr;
+  }
+
   .projects-grid-four .project-card,
   .projects-grid-four .project-card + .project-card,
   .projects-grid-four .project-card:nth-child(even) {
@@ -1231,6 +1269,23 @@ a {
   }
 
   .projects-grid-four .project-card h3 {
+    margin-top: 50px;
+  }
+
+  .projects-grid-five .project-card,
+  .projects-grid-five .project-card + .project-card,
+  .projects-grid-five .project-card:nth-child(even) {
+    min-height: 0;
+    padding: 28px 0 30px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .projects-grid-five .project-card:last-child {
+    border-bottom: 0;
+  }
+
+  .projects-grid-five .project-card h3 {
     margin-top: 50px;
   }
 
